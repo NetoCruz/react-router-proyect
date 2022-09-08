@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 138, 207);
+    padding-right: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar li{
+    display: flex;
+    padding-right: 10px;
+}
