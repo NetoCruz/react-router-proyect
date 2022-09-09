@@ -1,13 +1,13 @@
 import React from 'react';
 import "./Contacts.css"
-import Data from "../../Contacts"
+// import Data from "../../Contacts"
 import { Link } from 'react-router-dom'; 
 
 
 
-export default function Contacts(){
+export default function Contacts({data}){
     
-    const cards = Data.map(item =>{
+    const cards = data.map(item =>{
         return(
          <>
         <div className='card'>

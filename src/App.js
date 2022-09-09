@@ -7,13 +7,14 @@ import Profile from './Components/Profile/Profile';
 import Data from "./Contacts"
 
 function App() {
+  
   return (
    <Router> 
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/contacts" element={<Contacts/>}/>
-        <Route path="/profile/:userId" element={<Profile data={Data}/>} />
+        <Route  path="/contacts" element={<Contacts data={Data}/> }/>
+        <Route  path="/profile/:userId" element={<Profile data={Data}/>} />
       </Routes>
    </Router>
   );
