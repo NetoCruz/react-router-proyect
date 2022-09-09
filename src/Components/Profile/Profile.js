@@ -7,49 +7,65 @@ import { useParams } from 'react-router-dom';
 
 
 
-export default function Profile(props){
-    const {userId} = useParams()
-    const cards = Data.filter((item) => item.id === userId )
-                       .map((item)=>{
-                        return(
-                        <>
-                             <div className='card' key={item.id}>
+  export default function Profile(props){
+      const {userId} = useParams()
+//     const cards = Data.filter((item) => item.id === userId )
+//                        .map((item)=>{
+//                         return(
+//                         <>
+//                              <div className='card' key={item.id}>
                                
-                                <p>{item.name}</p>
-                               <p>{item.tel}</p>
-                                <p>{item.status}</p>
+//                                 <p>{item.name}</p>
+//                                <p>{item.tel}</p>
+//                                 <p>{item.status}</p>
                                
                                
                                 
-                               </div>
+//                                </div>
                               
-                               </> )
+//                                </> )
                                
 
-})
-    // const cards = Data.map(item =>{
-    //     return(
-    //      <>
-    //     <div className='card'>
+//  })
+
+
+   //  const cards = Data
+   //  .filter((item)=> item.id )
+   //  .map(item =>{
+   //      return(
+   //       <>
+   //      <div className='card'>
            
-    //        <p>{item.name}</p>
-    //        <p>{item.tel}</p>
-    //        <p>{item.status}</p>
+   //         <p>{item.name}</p>
+   //         <p>{item.tel}</p>
+   //         <p>{item.status}</p>
            
            
             
-    //       </div>
+   //        </div>
           
-    //       </> 
-    //     )
-    //    })
+   //        </> 
+   //      )
+   //     })
    
  return(
 
     <>
     <h1>Contact Profile</h1>
-   {cards}
-    
+   {/* {cards} */}
+   
+   <div className="explore-container">
+          {
+            Data
+              .filter(list => list.id === userId )
+              .map((list) => (
+                <div className="full-card" key={ list.id }>
+                  <h2>Name: {list.name}</h2>
+                 
+                </div>
+              ))}
+        </div>
     </>
  )
 }
+
