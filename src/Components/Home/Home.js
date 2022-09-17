@@ -4,10 +4,10 @@ import "./Home.css"
 
 export default function Home(){
  return (
-    <div>
+    <div className='contacts'>
     <h2>Contactos</h2>
-    <Link to="/contacts">
-    <button>Mi directorio</button>
+    <Link to="/contacts" className='cardbutton'>
+    Mi directorio
     </Link>
     </div>
  )
